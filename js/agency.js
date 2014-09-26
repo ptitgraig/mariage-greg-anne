@@ -62,4 +62,5 @@ $(document).ready(function($) {
 								.setTween(tweenTxt1)
 								.addTo(controller);
 
+	// défilements des horaires
 });

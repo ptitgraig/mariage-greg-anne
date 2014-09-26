@@ -363,17 +363,20 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .dropdown-menu {
-    background-color: #b3ddc4;
+    background-color: #fff;
+}
+
+.dropdown-menu>.active>a {
+    background-color: #fff;
 }
 
 .navbar-default .navbar-nav>.open .dropdown-menu a {
-    color: #fff;
+    color: #323232;
 }
 
 .navbar-default .navbar-nav>.open .dropdown-menu a:hover,
 .navbar-default .navbar-nav>.open .dropdown-menu a:focus {
     background-color: #b3ddc4;
-    text-decoration: underline;
     color:#fff;
 }
 
@@ -616,6 +619,56 @@ section h3.section-subheading {
     list-style: none;
 }
 
+.timeline.stickleft>li {
+    background-color: #fff;
+    border-top-right-radius:85px;
+    border-bottom-right-radius:85px;
+}
+.timeline.stickleft>li .timeline-image {
+    left:0;
+}
+.timeline.stickleft>li .timeline-panel {
+    left:0;
+    top:20px;
+    width: auto;
+    text-align: left;
+    opacity: 1;
+}
+.timeline.stickleft:before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    bottom: 0;
+    left: 100px;
+    width: 40px;
+    margin-left: -20px;
+    background-color: #fff;
+}
+.timeline.stickleft .timeline-heading h4 {
+    position: absolute;
+    top: -66px;
+    right: 72px;
+    color: #fff;
+    font-size: 54px;
+    font-family: "kg_eyes_wide_openregular";
+    text-transform: lowercase;
+}
+.timeline.stickleft .timeline-heading h4 span{
+    font-size: 60px;
+    font-family: "ecuyerdaxregular";
+    font-weight: 500;
+    color: #fff;
+}
+
+.timeline.stickleft .timeline-heading h4.subheading {
+    left: 130px;
+    color: #FFF;
+    font-size: 30px;
+    font-family: "Montserrat";
+    top: -49px;
+    font-weight: 500;
+}
+
 .timeline:before {
     content: "";
     position: absolute;
@@ -814,6 +867,7 @@ section h3.section-subheading {
         padding: 0 100px 20px 20px;
     }
 }
+
 
 .team-member {
     margin-bottom: 50px;
