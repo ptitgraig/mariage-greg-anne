@@ -1,4 +1,4 @@
-mariage-greg-anne
+Site de mariage
 =================
 
 Site de notre mariage
@@ -8,3 +8,4 @@ Technologies :
 * ScrollMagic.js
 * Less
 * jQuery
+* PHP Mail
