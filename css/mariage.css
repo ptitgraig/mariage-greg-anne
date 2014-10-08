@@ -129,7 +129,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: #3c3316;
 }
 
 h1,
@@ -166,6 +166,111 @@ h6 {
     display: block;
     content: ' ';
     background: url(../img/bg-imageoverlay.png);
+}
+
+.lieu {
+    background: transparent url(../img/lieu.jpg) 0 top no-repeat;
+    position: relative;
+    min-height: 360px;
+    background-size: 390px;
+    transition: background-position 0.5s ease;
+    z-index: 2;
+}
+
+.lieu:hover {
+    background: transparent url(../img/lieu.jpg) 0 bottom no-repeat;
+    background-size: 390px;
+}
+
+.lieu address {
+    position: absolute;
+    top: 25px;
+    background: #fff;
+    display: block;
+    width: 100%;
+    margin-left: -15px;
+    padding: 15px;
+    color: #323232;
+    z-index: 2;
+}
+
+.lieu:after {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: ' ';
+    background: url(../img/bg-imageoverlay.png);
+}
+
+.lieu:hover:after {
+    display: none;
+}
+
+.venir h4 {
+    font-size: 2em;
+}
+
+.tab-content {
+    min-height: 313px;
+    background: #fff;
+    padding:20px 10px 10px 20px;
+}
+
+.nav-tabs>li>a {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    border-radius:2px 2px 0 0;
+}
+
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
+    background-color: #fff;
+    color:#;
+}
+
+.decision label {
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 35px;  
+    margin-right: 15px;  
+    font-size: 1.5em;
+    color:#fff;
+}
+
+.decision label:before {
+    content: "";
+    display: inline-block;
+
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #fff;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+.decision input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #323232;
+    font-size: 60px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.decision input[type=radio] {  
+    display: none; 
+}  
+
+#temoin {
+    background: transparent url(../img/bg-witness.png) scroll repeat 0 0;
 }
 
 section {
@@ -637,12 +742,13 @@ section h3.section-subheading {
 .timeline.stickleft:before {
     content: "";
     position: absolute;
-    top: -60px;
+    top: -30px;
     bottom: 0;
     left: 100px;
     width: 40px;
     margin-left: -20px;
     background-color: #fff;
+    border-radius: 14px;
 }
 .timeline.stickleft .timeline-heading h4 {
     position: absolute;

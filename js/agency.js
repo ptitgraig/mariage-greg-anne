@@ -62,5 +62,20 @@ $(document).ready(function($) {
 								.setTween(tweenTxt1)
 								.addTo(controller);
 
-	// défilements des horaires
+	// parralax
+	var duration = $("#temoin").height() + $(window).height();
+	var bgPosMovement = "0 " + (duration*0.5) + "px";
+	var bgPosMovement2 = "0 " + (duration*0.2) + "px";
+	var controllerParralax = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: duration}});
+	new ScrollScene({triggerElement: "#team"})
+		.setTween(TweenMax.to("#team", 1, {backgroundPosition: bgPosMovement, ease: Linear.easeNone}))
+		.addTo(controllerParralax);
+	new ScrollScene({triggerElement: "#programme"})
+		.setTween(TweenMax.to("#programme", 1, {backgroundPosition: bgPosMovement2, ease: Linear.easeNone}))
+		.addTo(controllerParralax);
+	new ScrollScene({triggerElement: "#temoin"})
+		.setTween(TweenMax.to("#temoin", 1, {backgroundPosition: bgPosMovement, ease: Linear.easeNone}))
+		.addTo(controllerParralax);
+
+
 });
